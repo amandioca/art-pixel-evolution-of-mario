@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evolution of Mario</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400&display=swap" rel="stylesheet">
+</head>
+<style>
+    body {
+        font-family: 'Fira Code', monospace;
+        overflow: hidden;
+        background-color: #fff2df;
+    }
+
+    .scene {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    .container-evolution {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .frame {
+        display: flex;
+        flex-direction: column;
+        height: 380px;
+        width: 240px;
+        margin: 20px;
+        padding: 10px;
+    }
+
+    .pixel-art {
+        display: flex;
+        align-items: end;
+        justify-content: center;
+        height: 100%;
+    }
+    #jumpman-donkey-kong {
+        direction: rtl;
+    }
+
+    .title{
+        margin-bottom: 100px;
+    }
+
+    .title span:first-child{
+        font-size: xx-large;
+        font-weight: bold;
+    }
+
+    .version {
+        display: grid;
+        padding-top: 20px;
+        text-align: center;
+    }
+
+    .version span:first-child {
+        font-weight: bold;
+    }
+
+    .version span:last-child {
+        font-size: small;
+    }
+
+    .divisory {
+        border: 1px solid #0000003a;
+        width: 100%;
+    }
+</style>
+
+<body>
+    <div class="scene">
+        <div class="title">
+            <span>Evolution of Mario</span>
+        </div>
+
+        <div class="container-evolution">
+            <div class="frame">
+                <div class="pixel-art" id="jumpman-donkey-kong"></div>
+                <div class="version">
+                    <span>Donkey Kong</span>
+                    <span>1981</span>
+                </div>
+            </div>
+
+            <div class="frame teste">
+                <div class="pixel-art" id="super-mario-bros"></div>
+                <div class="version">
+                    <span>Super Mario Bros.</span>
+                    <span>1985</span>
+                </div>
+            </div>
+
+            <div class="frame">
+                <div class="pixel-art" id="super-mario-world"></div>
+                <div class="version">
+                    <span>Super Mario World</span>
+                    <span>1990</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        fetch('jumpman-donkey-kong.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Erro ao carregar o conteúdo: ' + response.statusText);
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('jumpman-donkey-kong').innerHTML = data;
+            })
+            .catch(error => console.error('Erro ao carregar o conteúdo:', error));
+    
+            fetch('super-mario-bros.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Erro ao carregar o conteúdo: ' + response.statusText);
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('super-mario-bros').innerHTML = data;
+            })
+            .catch(error => console.error('Erro ao carregar o conteúdo:', error));
+    
+            fetch('super-mario-world.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Erro ao carregar o conteúdo: ' + response.statusText);
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('super-mario-world').innerHTML = data;
+            })
+            .catch(error => console.error('Erro ao carregar o conteúdo:', error));
+    
+    </script>
+</body>
+
+</html>
