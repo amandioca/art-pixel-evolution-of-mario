@@ -29,4 +29,7 @@ Este projeto é uma coleção de pixel arts que ilustram a evolução do persona
 - O projeto não depende de frameworks ou bibliotecas externas, garantindo leveza e simplicidade.
 
 ## Como contribuir
-Sinta-se à vontade para sugerir ou adicionar novas versões do Mario, abrir issues ou enviar pull requests para expandir o projeto!
+😁 Sinta-se à vontade para sugerir ou adicionar novas versões do Mario, abrir issues ou enviar pull requests para expandir o projeto!
+
+## Licença
+Este projeto é livre para uso pessoal e educacional.
